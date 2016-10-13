@@ -9,4 +9,11 @@
             </batchtest>
         </phpunit>
     </target>
+    <target name="check">
+         <phpcodesniffer showSniffs="true">
+             <fileset dir=".">
+                 <include name="*.php"/>
+             </fileset>
+         </phpcodesniffer>
+    </target>
 </project>
