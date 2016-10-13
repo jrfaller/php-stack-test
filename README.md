@@ -1,4 +1,4 @@
-# PHP Tool Stack Test
+# PHP Tool Stack Test [![Build Status](https://travis-ci.org/jrfaller/php-stack-test.svg?branch=master)]
 
 This repository is a showcase to demonstrate how to build a full tool stack for PHP. The following tools are used:
 
