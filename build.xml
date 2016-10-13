@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="PhpStackTest" default="test">
+<project name="PhpStackTest" default="check">
+  <target name="check" depends="lint, test"/>
   <target name="test">
     <phpunit haltonfailure="test" printsummary="true">
       <batchtest>
@@ -34,7 +35,7 @@
       </fileset>
     </phploc>
   </target>
-  <target name="check">
+  <target name="lint">
     <phpcodesniffer standard="PEAR">
       <fileset dir=".">
         <include name="*.php"/>
