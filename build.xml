@@ -10,6 +10,9 @@
     </phpunit>
   </target>
   <target name="reports">
+    <tstamp>
+      <format property="check.date.time" pattern="%Y%m%d-%H%M%S" locale="en_US"/>
+    </tstamp>
     <coverage-setup database="reports/coverage.db">
       <fileset dir=".">
         <include name="*.php"/>
@@ -24,7 +27,12 @@
         </fileset>
       </batchtest>
     </phpunit>
-
+    <phploc reportType="txt" reportName="${check.date.time}-loc"
+      reportDirectory="reports">
+      <fileset dir=".">
+        <include name="*.php" />
+      </fileset>
+    </phploc>
   </target>
   <target name="check">
     <phpcodesniffer standard="PEAR">
