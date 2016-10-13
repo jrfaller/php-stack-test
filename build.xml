@@ -36,7 +36,7 @@
     </phploc>
   </target>
   <target name="lint">
-    <phpcodesniffer standard="PEAR">
+    <phpcodesniffer standard="PEAR" haltonerror="true">
       <fileset dir=".">
         <include name="*.php"/>
       </fileset>
