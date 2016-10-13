@@ -7,6 +7,6 @@
         "phpunit/phpunit": "^4.8",
         "phing/phing": "^2.15",
         "phpdocumentor/phpdocumentor": "^2.9",
-        "phploc/phploc": "^3.0"
+        "phploc/phploc": "^2.1"
     }
 }
