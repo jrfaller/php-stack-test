@@ -11,7 +11,7 @@ This repository is a showcase to demonstrate how to build a full tool stack for 
 * [travis-ci](https://travis-ci.org/) for continuous integration
 * [phploc](https://github.com/sebastianbergmann/phploc) for software metrics
 
-## installation
+## Installation
 
 Just clone the repository and run the following commands (requires PHP >= 5.3)
 
@@ -22,3 +22,4 @@ vendor/bin/phing reports
 vendor/bin/phing check
 vendor/bin/phing
 ```
+You'll find the generated documentation in `docs` and the test, coverage and metrics reports in `reports`.
