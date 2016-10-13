@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PhpStackTest" default="test">
+    <target name="test">
+        <phpunit haltonfailure="test" printsummary="true">
+            <batchtest>
+                <fileset dir=".">
+                    <include name="*test*.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+</project>
