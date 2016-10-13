@@ -1,0 +1,11 @@
+{
+    "require": {
+        "twig/twig": "^1.26"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.7",
+        "phpunit/phpunit": "^4.8",
+        "phing/phing": "^2.15",
+        "phpdocumentor/phpdocumentor": "^2.9"
+    }
+}
