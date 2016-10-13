@@ -10,7 +10,7 @@
         </phpunit>
     </target>
     <target name="check">
-         <phpcodesniffer showSniffs="true">
+         <phpcodesniffer standard="PEAR">
              <fileset dir=".">
                  <include name="*.php"/>
              </fileset>
