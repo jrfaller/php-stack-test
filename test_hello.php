@@ -13,8 +13,9 @@
  * @link      https://github.com/jrfaller/php-stack-test
  */
 
-require 'hello.php';
-require 'vendor/autoload.php';
+require_once 'hello.php';
+require_once 'dao.php';
+require_once 'vendor/autoload.php';
 
 /**
  * Test hello class.
@@ -50,5 +51,18 @@ class HelloTest extends PHPUnit_Framework_TestCase
         $p = $h->helloPage();
         $this->assertContains('Hello JRe!', $p);
         $this->assertContains('<html>', $p);
+    }
+
+    /**
+     * Test testLogins method.
+     *
+     * @return void
+     */
+    public function testLogins()
+    {
+        $dao = new Dao();
+        $l = $dao->logins();
+        $this->assertContains('JRe', $l);
+        $this->assertContains('Xavier', $l);
     }
 }

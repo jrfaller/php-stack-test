@@ -50,7 +50,7 @@ class Hello
     function helloPage()
     {
         $template = $this->twig->loadTemplate('hello.tpl');
-        return $template->render(array('hello' => $this->say_hello()));
+        return $template->render(array('hello' => $this->sayHello()));
     }
 
     /**
@@ -64,7 +64,7 @@ class Hello
     {
         $this->name = $name;
         $this->twig = new Twig_Environment(
-            new Twig_Loader_Filesystem('.'), array('cache' => '.')
+            new Twig_Loader_Filesystem('.'), array('cache' => 'tpl')
         );
     }
 }

@@ -1,2 +1,6 @@
 composer.lock
+data.db
 vendor/
+tpl/
+reports/
+docs/
