@@ -4,3 +4,4 @@ vendor/
 tpl/
 reports/
 docs/
+.vagrant/
