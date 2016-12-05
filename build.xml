@@ -28,6 +28,9 @@
         </fileset>
       </batchtest>
     </phpunit>
+    <coverage-report outfile="reports/coverage.xml">
+      <report todir="reports/coverage" styledir="${phing.etc.dir.resolved}" title="Phing" usesorttable="true"/>
+    </coverage-report >
     <phploc reportType="txt" reportName="${check.date.time}-loc"
       reportDirectory="reports">
       <fileset dir=".">
