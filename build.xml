@@ -11,28 +11,32 @@
     </phpunit>
   </target>
   <target name="reports">
+    <mkdir dir="reports/coverage"/>
+    <mkdir dir="reports/loc"/>
+    <mkdir dir="reports/test"/>
     <tstamp>
       <format property="check.date.time" pattern="%Y%m%d-%H%M%S" locale="en_US"/>
     </tstamp>
-    <coverage-setup database="reports/coverage.db">
+    <coverage-setup database="reports/coverage/coverage.db">
       <fileset dir=".">
         <include name="*.php"/>
+        <exclude name="install_db.php"/>
         <exclude name="*test*.php"/>
       </fileset>
     </coverage-setup>
     <phpunit haltonfailure="test" printsummary="true" codecoverage="true">
-      <formatter type="xml" todir="reports"/>
+      <formatter type="xml" todir="reports/test"/>
       <batchtest>
         <fileset dir=".">
           <include name="*test*.php"/>
         </fileset>
       </batchtest>
     </phpunit>
-    <coverage-report outfile="reports/coverage.xml">
-      <report todir="reports/coverage" styledir="${phing.etc.dir.resolved}" title="Phing" usesorttable="true"/>
+    <coverage-report outfile="reports/coverage/coverage.xml">
+      <report styledir="vendor/phing/phing/etc/" todir="reports/coverage"/>
     </coverage-report >
     <phploc reportType="txt" reportName="${check.date.time}-loc"
-      reportDirectory="reports">
+      reportDirectory="reports/loc">
       <fileset dir=".">
         <include name="*.php" />
       </fileset>

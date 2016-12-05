@@ -70,6 +70,7 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y php5-cli
     sudo apt-get install -y apache2
     sudo apt-get install -y php5-sqlite
+    sudo apt-get install -y php5-xsl
     cd /vagrant
     php composer.phar install
     sudo apt-get install -y php5-xdebug
