@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="PhpStackTest" default="check">
-  <target name="check" depends="lint, test"/>
+  <target name="check" depends="lint, test, reports, docs"/>
   <target name="test">
     <phpunit haltonfailure="test" printsummary="true">
       <batchtest>
