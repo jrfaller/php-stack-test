@@ -49,6 +49,7 @@
     </phpcodesniffer>
   </target>
   <target name="docs">
+    <mkdir dir="docs"/>
     <phpdoc2 title="Hello" destdir="docs" template="responsive">
       <fileset dir="src">
         <include name="**/*.php"/>
