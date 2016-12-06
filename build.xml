@@ -4,8 +4,8 @@
   <target name="test">
     <phpunit haltonfailure="test" printsummary="true">
       <batchtest>
-        <fileset dir=".">
-          <include name="*test*.php"/>
+        <fileset dir="tests">
+          <include name="**/*.php"/>
         </fileset>
       </batchtest>
     </phpunit>
@@ -18,17 +18,16 @@
       <format property="check.date.time" pattern="%Y%m%d-%H%M%S" locale="en_US"/>
     </tstamp>
     <coverage-setup database="reports/coverage/coverage.db">
-      <fileset dir=".">
-        <include name="*.php"/>
+      <fileset dir="src">
+        <include name="**/*.php"/>
         <exclude name="install_db.php"/>
-        <exclude name="*test*.php"/>
       </fileset>
     </coverage-setup>
     <phpunit haltonfailure="test" printsummary="true" codecoverage="true">
       <formatter type="xml" todir="reports/test"/>
       <batchtest>
-        <fileset dir=".">
-          <include name="*test*.php"/>
+        <fileset dir="tests">
+          <include name="**/*.php"/>
         </fileset>
       </batchtest>
     </phpunit>
@@ -37,22 +36,22 @@
     </coverage-report >
     <phploc reportType="txt" reportName="${check.date.time}-loc"
       reportDirectory="reports/loc">
-      <fileset dir=".">
-        <include name="*.php" />
+      <fileset dir="src">
+        <include name="**/*.php" />
       </fileset>
     </phploc>
   </target>
   <target name="lint">
     <phpcodesniffer standard="PEAR" haltonerror="true">
-      <fileset dir=".">
-        <include name="*.php"/>
+      <fileset dir="src">
+        <include name="**/*.php"/>
       </fileset>
     </phpcodesniffer>
   </target>
   <target name="docs">
     <phpdoc2 title="Hello" destdir="docs" template="responsive">
-      <fileset dir=".">
-        <include name="*.php"/>
+      <fileset dir="src">
+        <include name="**/*.php"/>
       </fileset>
     </phpdoc2>
   </target>

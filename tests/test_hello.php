@@ -13,9 +13,9 @@
  * @link      https://github.com/jrfaller/php-stack-test
  */
 
-require_once 'hello.php';
-require_once 'dao.php';
 require_once 'vendor/autoload.php';
+require_once 'src/hello.php';
+require_once 'src/dao.php';
 
 /**
  * Test hello class.

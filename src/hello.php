@@ -64,7 +64,7 @@ class Hello
     {
         $this->name = $name;
         $this->twig = new Twig_Environment(
-            new Twig_Loader_Filesystem('.'), array('cache' => 'tpl')
+            new Twig_Loader_Filesystem(dirname(__FILE__)), array('cache' => 'tpl')
         );
     }
 }
